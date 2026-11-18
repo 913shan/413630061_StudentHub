@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudentHub 學生名單</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><h1>StudentHub</h1><p>新增學生並查看名單</p></header>
+    <section>
+      <h2>新增學生</h2>
+      <form>
+        <label>使用者名稱<input name="userName" required maxlength="254"></label>
+        <label>姓名<input name="name" required maxlength="254"></label>
+        <label>科系<input name="department" required maxlength="254"></label>
+        <label>年級<input name="grade" required maxlength="254"></label>
+        <label>班別<input name="class" required maxlength="254"></label>
+        <label>電子郵件<input name="Email" type="email" required maxlength="254"></label>
+        <button>新增學生</button>
+      </form>
+      <p id="status" role="status"></p>
+    </section>
+    <section>
+      <h2>學生名單 <span id="count"></span></h2>
+      <div class="table"><table>
+        <thead><tr><th>編號</th><th>使用者名稱</th><th>姓名</th><th>科系</th><th>年級</th><th>班別</th><th>電子郵件</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+  </main>
+</body>
+</html>

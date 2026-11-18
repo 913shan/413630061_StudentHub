@@ -1,0 +1,82 @@
+{
+  "info": {
+    "name": "413630061_StudentHub",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8877"
+    }
+  ],
+  "item": [
+    {
+      "name": "insertOne",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/v1/user/insertOne",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userName\": \"{{testUser}}\",\n  \"name\": \"測試學生\",\n  \"department\": \"測試系\",\n  \"grade\": \"一年級\",\n  \"class\": \"A\",\n  \"Email\": \"{{testUser}}@example.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set('testUser', 'student_' + pm.variables.replaceIn('{{$guid}}'));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const result = pm.response.json();",
+              "pm.test('JSON code is 200', () => pm.expect(result.code).to.eql(200));",
+              "pm.test('Response contains the inserted student', () => { pm.expect(result.body.userName).to.eql(pm.variables.get('testUser')); pm.expect(result.body.sid).to.be.a('string'); pm.collectionVariables.set('insertedSid', result.body.sid); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "findAll",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/user/findAll"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const result = pm.response.json();",
+              "pm.test('JSON code is 200', () => pm.expect(result.code).to.eql(200));",
+              "pm.test('Student list is an array', () => pm.expect(result.body).to.be.an('array'));",
+              "const sid = pm.collectionVariables.get('insertedSid');",
+              "if (sid) pm.test('The inserted student is in the list', () => pm.expect(result.body.some(student => student.sid === sid)).to.eql(true));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
