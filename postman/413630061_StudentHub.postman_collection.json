@@ -39,7 +39,7 @@
         "url": "http://localhost:8890/api/v1/user/insertOne",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"userName\": \"tkuxx9999\",\n  \"name\": \"測試學生\",\n  \"department\": \"測試系\",\n  \"grade\": \"一年級\",\n  \"class\": \"A\",\n  \"Email\": \"tkuxx9999@example.com\"\n}",
+          "raw": "{\n  \"userName\": \"413630061\",\n  \"name\": \"鄒采珊\",\n  \"department\": \"資訊管理系\",\n  \"grade\": \"三年級\",\n  \"class\": \"C\",\n  \"Email\": \"zcs0913@gmail.com\"\n}",
           "options": {
             "raw": {
               "language": "json"

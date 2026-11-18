@@ -81,6 +81,11 @@ export class UserService extends Service {
     '學生名字格式不正確，應為 tku + 科系縮寫 + 四碼座號，例如: tkubm1760' | '座號已存在' | '校名必須為 tku' | '座號格式不正確，必須為四位數字。' | '驗證通過'
     > {
 
+        // 接受九碼學號，沿用既有座號重複檢查。
+        if (/^\d{9}$/.test(userName)) {
+            return await this.existingSeatNumbers(userName.slice(-4)) ? '座號已存在' : '驗證通過';
+        }
+
         if (userName.length < 7) {
             return ('學生名字格式不正確，應為 tku + 科系縮寫 + 四碼座號，例如: tkubm1760');
         }
