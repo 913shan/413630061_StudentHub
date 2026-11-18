@@ -10,7 +10,21 @@
         "method": "GET",
         "header": [],
         "url": "http://localhost:8890/api/v1/user/findAll"
-      }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "const result = pm.response.json();",
+              "pm.test(\"code 200\", () => pm.expect(result.code).to.eql(200));",
+              "pm.test(\"學生清單\", () => { pm.expect(result.body).to.be.an(\"array\"); pm.expect(result.body.length).to.be.at.least(50); });"
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "新增測試學生（只送一次）",
@@ -32,7 +46,21 @@
             }
           }
         }
-      }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "const result = pm.response.json();",
+              "pm.test(\"code 200\", () => pm.expect(result.code).to.eql(200));",
+              "pm.test(\"新增學生欄位\", () => { pm.expect(result.body.userName).to.eql(\"tkuxx9999\"); pm.expect(result.body.sid).to.be.a(\"string\"); pm.expect(result.body._id).to.match(/^[a-f0-9]{24}$/); });"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

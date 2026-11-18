@@ -29,7 +29,7 @@ docker compose up -d
 
 首次建立空白 volume 時會自動建立帳號並匯入 50 筆資料。後端 API 預設為 `http://localhost:8890`。本機 8877、8878 已被其他程式占用，因此使用 8890；若要跟老師使用相同埠，先確認 8877 可用，再把根目錄 `.env` 的 `API_PORT` 改成 8877，並同步調整 Postman 網址。
 
-Docker 設定已提供，但這台電腦尚未安裝 Docker，因此本次未實際驗證容器啟動。
+Docker Desktop 已安裝，MongoDB 與後端容器已實際啟動。使用 Newman 執行 Postman Collection：2 個請求均為 HTTP 200，6 項斷言全部通過；GET 50 筆 → POST sid "51" → GET 51 筆。[Docker 測試結果](docs/Docker測試結果.json)。
 
 ## 已完成的本機測試
 

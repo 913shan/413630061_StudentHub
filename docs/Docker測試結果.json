@@ -1,0 +1,18 @@
+{
+  "environment": "Docker Desktop / mongo:8 / node:22",
+  "baseUrl": "http://localhost:8890",
+  "requests": {
+    "total": 2,
+    "pending": 0,
+    "failed": 0
+  },
+  "assertions": {
+    "total": 6,
+    "pending": 0,
+    "failed": 0
+  },
+  "beforeCount": 50,
+  "insertedSid": "51",
+  "afterCount": 51,
+  "failures": []
+}
