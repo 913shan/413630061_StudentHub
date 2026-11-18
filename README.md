@@ -1,57 +1,44 @@
-# 413630061 StudentHub 課程作業
-
-依老師 [115_StudentHub](https://github.com/yyyxi18/115_StudentHub) 原始碼完成的 **Express / TypeScript / MongoDB 版本位於 [course/](course/)**。原有 SQLite 版本保留在根目錄。
-
-## 課程版使用方式
-
-1. 安裝 Node.js 22 與 MongoDB 8，依 [老師操作文件](course/README.md) 建立帳號與資料庫。若老師要求 Docker，請依該文件安裝 Docker Desktop 並啟動容器。
-2. 複製 `course/BackEndExample/.env.example` 為 `.env`，填入自己的資料庫帳號及路徑；`DBAUTHSOURCE=studenthub`，`PORT=8890`，其他欄位參考老師文件。
-3. 在 `course/BackEndExample` 執行 `npm ci`。
-4. 回到 `course`，執行 `node scripts/init-db.cjs --auth` 匯入 CSV（已存在的帳號會略過）。
-5. 在 `course/BackEndExample` 執行 `npm run compile`，再執行 `npm start`。
-6. Postman 匯入 [課程版 Collection](course/StudentHub.postman_collection.json)，預設 `http://localhost:8890`。
-
-## 實測結果
-
-本機以真正 MongoDB 8、帳號驗證及課程 CSV 測試：GET 50 筆 → POST 新增 tkuxx9999，sid 為字串 "51" → GET 51 筆。重複新增回傳 HTTP 403。已通過 TypeScript 編譯。
-
-回應紀錄：[新增前](course/GET-新增前.json)、[新增成功](course/POST-新增成功.json)、[新增後](course/GET-新增後.json)。這些是測試回應，資料不會隨 clone 自動出現在資料庫。
-
-本機使用 8890 是因 8877、8878 已被占用。MongoDB 本次以本機程序執行，**未驗證 Docker 容器或 Compass 操作**。
-
-## 修改與來源
-
-保留老師原始前後端與 CSV，修正後端 authSource，使資料庫內建立的應用帳號可以驗證；修正連線失敗傳遞及避免記錄含密碼的 URI。移除套件中的舊 Node 19 依賴，新增一次性編譯命令與可重複執行的 CSV 匯入工具。老師文件中的帳密僅為公開練習範例，實際 `.env`、資料庫及 runtime 均未上傳。
-
----
-
-## 原有 SQLite 版本說明
-
 # 413630061_StudentHub
 
-StudentHub 提供學生名單、新增表單，以及供 Postman 測試的兩支 JSON API。
+1. [GitHub 倉庫：413630061_StudentHub](https://github.com/913shan/413630061_StudentHub)
+2. Postman 測試回應紀錄
+   - [findAll：新增前 50 筆](docs/GET-新增前.json)
+   - [insertOne：成功新增，sid 為 51](docs/POST-新增成功.json)
+   - [findAll：新增後 51 筆](docs/GET-新增後.json)
 
-## 本機啟動
+目前附上實際 API JSON 紀錄，尚未加入 Postman 畫面截圖。
 
-安裝 Node.js 22.13 以上版本，從專案根目錄執行：
+## 專案結構
+
+- `BackEndExample/`：老師的 Express、TypeScript、Mongoose 後端及連線修正。
+- `FrontEndExample/`：老師的 React 前端，API 預設為 8890。
+- `studentslist.csv`：老師提供的 50 筆學生資料。
+- `postman/413630061_StudentHub.postman_collection.json`：可直接匯入 Postman。
+- `compose.yaml`、`docker/init.js`：MongoDB 與後端的 Docker 設定。
+- `legacy/`：之前的 SQLite 版本。
+
+## Docker 啟動
+
+先安裝並開啟 Docker Desktop，複製根目錄 `.env.example` 為 `.env`，自行設定兩組本機資料庫密碼，再執行：
 
 ```sh
-node server.mjs
+docker compose up -d
 ```
 
-瀏覽器開啟 `http://127.0.0.1:8877`。SQLite 資料庫會自動建立於 `data/students.sqlite`，初次啟動時名單為空。可使用 `PORT` 調整連接埠，或用 `STUDENTHUB_DB` 指定資料庫位置。
+首次建立空白 volume 時會自動建立帳號並匯入 50 筆資料。後端 API 預設為 `http://localhost:8890`。本機 8877、8878 已被其他程式占用，因此使用 8890；若要跟老師使用相同埠，先確認 8877 可用，再把根目錄 `.env` 的 `API_PORT` 改成 8877，並同步調整 Postman 網址。
 
-## Postman 測試
+Docker 設定已提供，但這台電腦尚未安裝 Docker，因此本次未實際驗證容器啟動。
 
-在 Postman 選 **Import**，匯入根目錄的 `413630061_StudentHub.postman_collection.json`。預設連線至 `http://127.0.0.1:8877`，可在 Collection 的 **Variables** 調整 `baseUrl`。
+## 已完成的本機測試
 
-| 方法 | 路徑 | 成功回應 |
-| --- | --- | --- |
-| GET | `/api/v1/user/findAll` | `200 OK`，`body` 是學生陣列 |
-| POST | `/api/v1/user/insertOne` | `200 OK`，`body` 含新增資料與 `sid` |
+以真正 MongoDB 8 啟用帳號驗證，匯入 CSV 後實測 GET 回傳 50 筆；POST 新增 `tkuxx9999` 回傳 HTTP 200、`sid: "51"` 與 `_id`；再 GET 得到 51 筆。重複新增回傳 HTTP 403。TypeScript 編譯通過。
 
-先按 **Send** 送出 `insertOne`，再送 `findAll`，即可在陣列看到新增資料。測試用名稱會在每次傳送時產生。截圖時保留方法、URL、HTTP 狀態及回應，並在 `insertOne` 顯示 **Body → raw → JSON**。
+Postman 匯入 `postman/413630061_StudentHub.postman_collection.json` 後按 Send 即可測試。上述帳號已在本機新增，再測新增請改用未使用的四碼座號。新資料庫第一次匯入後則可直接送出範例。
+
+## 不使用 Docker 的啟動方式
+
+依 [老師操作文件](docs/老師操作文件.md) 準備 MongoDB 帳號。將 `BackEndExample/.env.example` 複製為 `.env` 並填入自己的密碼，在 `BackEndExample` 執行 `npm ci`；回根目錄執行 `node scripts/init-db.cjs --auth`；最後在 `BackEndExample` 執行 `npm run compile` 與 `npm start`。
 
 ## 程式碼來源
 
-前端、Node.js HTTP API、SQLite 儲存和 Postman Collection 在本倉庫獨立實作，使用者提供的作業截圖是路徑、欄位名稱和回應格式的參考。前端使用原生 HTML、CSS 與 JavaScript，後端使用 Node.js 內建模組。
+課程原始碼與學生範例來自 [yyyxi18/115_StudentHub](https://github.com/yyyxi18/115_StudentHub)。保留課程架構，修正 MongoDB 認證資料庫、錯誤傳遞與日誌；加入匯入工具、Postman 測試與 Docker 設定。實際密碼、資料庫、runtime 和 node_modules 均不提交。

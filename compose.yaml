@@ -1,0 +1,43 @@
+name: studenthub-413630061
+services:
+  mongo:
+    image: mongo:8
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: studentAdmin
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:?Set MONGO_ROOT_PASSWORD in .env}
+      MONGO_APP_PASSWORD: ${MONGO_APP_PASSWORD:?Set MONGO_APP_PASSWORD in .env}
+    volumes:
+      - mongo-data:/data/db
+      - ./docker/init.js:/docker-entrypoint-initdb.d/init.js:ro
+      - ./studentslist.csv:/seed/studentslist.csv:ro
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  backend:
+    image: node:22
+    working_dir: /app/BackEndExample
+    command: sh -c "npm ci && npm run compile && node build/app.js"
+    ports:
+      - "127.0.0.1:${API_PORT:-8890}:8877"
+    volumes:
+      - .:/app
+      - backend-modules:/app/BackEndExample/node_modules
+    environment:
+      DBUSER: studenthub_app
+      DBPASSWORD: ${MONGO_APP_PASSWORD:?Set MONGO_APP_PASSWORD in .env}
+      DBHOST: mongo
+      DBPORT: "27017"
+      DBNAME: studenthub
+      DBAUTHSOURCE: studenthub
+      PORT: "8877"
+      LogPath: logs
+      assetsPath: ../FrontEndExample/dist/assets
+      HomePagePath: ../FrontEndExample/dist/index.html
+    depends_on:
+      mongo:
+        condition: service_healthy
+volumes:
+  mongo-data:
+  backend-modules:
