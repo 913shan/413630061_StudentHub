@@ -1,0 +1,15 @@
+{
+  "code": 200,
+  "message": "",
+  "body": {
+    "userName": "tkuxx9999",
+    "sid": "51",
+    "name": "測試學生",
+    "department": "測試系",
+    "grade": "一年級",
+    "class": "A",
+    "Email": "tkuxx9999@example.com",
+    "_id": "6afd1a09c6f9a6f720926851",
+    "__v": 0
+  }
+}

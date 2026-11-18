@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "StudentHub 老師範例",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "查詢全部學生",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8890/api/v1/user/findAll"
+      }
+    },
+    {
+      "name": "新增測試學生（只送一次）",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8890/api/v1/user/insertOne",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userName\": \"tkuxx9999\",\n  \"name\": \"測試學生\",\n  \"department\": \"測試系\",\n  \"grade\": \"一年級\",\n  \"class\": \"A\",\n  \"Email\": \"tkuxx9999@example.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

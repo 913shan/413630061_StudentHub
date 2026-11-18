@@ -1,0 +1,506 @@
+{
+  "code": 200,
+  "message": "find sucess",
+  "body": [
+    {
+      "_id": "6afd19b7e526170a547aa4d6",
+      "userName": "tkuee0787",
+      "Email": "tkuee0787@tkuim.com",
+      "class": "A",
+      "department": "電機工程系",
+      "grade": "四年級",
+      "name": "張佳慧",
+      "sid": "1"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4d7",
+      "userName": "tkubm9553",
+      "Email": "tkubm9553@tkuim.com",
+      "class": "A",
+      "department": "企業管理系",
+      "grade": "二年級",
+      "name": "蔡文杰",
+      "sid": "2"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4d8",
+      "userName": "tkupy6676",
+      "Email": "tkupy6676@tkuim.com",
+      "class": "A",
+      "department": "心理學系",
+      "grade": "三年級",
+      "name": "吳欣怡",
+      "sid": "3"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4d9",
+      "userName": "tkume2253",
+      "Email": "tkume2253@tkuim.com",
+      "class": "B",
+      "department": "機械工程系",
+      "grade": "四年級",
+      "name": "劉怡婷",
+      "sid": "4"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4da",
+      "userName": "tkupy8394",
+      "Email": "tkupy8394@tkuim.com",
+      "class": "A",
+      "department": "心理學系",
+      "grade": "四年級",
+      "name": "黃慧珍",
+      "sid": "5"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4db",
+      "userName": "tkume6194",
+      "Email": "tkume6194@tkuim.com",
+      "class": "A",
+      "department": "機械工程系",
+      "grade": "三年級",
+      "name": "林家豪",
+      "sid": "6"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4dc",
+      "userName": "tkubm8985",
+      "Email": "tkubm8985@tkuim.com",
+      "class": "B",
+      "department": "企業管理系",
+      "grade": "四年級",
+      "name": "黃淑芬",
+      "sid": "7"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4dd",
+      "userName": "tkuim0867",
+      "Email": "tkuim0867@tkuim.com",
+      "class": "B",
+      "department": "資訊管理系",
+      "grade": "三年級",
+      "name": "楊怡萱",
+      "sid": "8"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4de",
+      "userName": "tkume1838",
+      "Email": "tkume1838@tkuim.com",
+      "class": "C",
+      "department": "機械工程系",
+      "grade": "三年級",
+      "name": "李瑞芳",
+      "sid": "9"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4df",
+      "userName": "tkuim1646",
+      "Email": "tkuim1646@tkuim.com",
+      "class": "B",
+      "department": "資訊管理系",
+      "grade": "二年級",
+      "name": "林志豪",
+      "sid": "10"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e0",
+      "userName": "tkupy7718",
+      "Email": "tkupy7718@tkuim.com",
+      "class": "D",
+      "department": "心理學系",
+      "grade": "四年級",
+      "name": "劉柏宇",
+      "sid": "11"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e1",
+      "userName": "tkupy4744",
+      "Email": "tkupy4744@tkuim.com",
+      "class": "C",
+      "department": "心理學系",
+      "grade": "一年級",
+      "name": "楊冠霖",
+      "sid": "12"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e2",
+      "userName": "tkuim8642",
+      "Email": "tkuim8642@tkuim.com",
+      "class": "C",
+      "department": "資訊管理系",
+      "grade": "二年級",
+      "name": "林俊傑",
+      "sid": "13"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e3",
+      "userName": "tkubm4001",
+      "Email": "tkubm4001@tkuim.com",
+      "class": "B",
+      "department": "企業管理系",
+      "grade": "四年級",
+      "name": "王子豪",
+      "sid": "14"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e4",
+      "userName": "tkubm5739",
+      "Email": "tkubm5739@tkuim.com",
+      "class": "B",
+      "department": "企業管理系",
+      "grade": "三年級",
+      "name": "張昱廷",
+      "sid": "15"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e5",
+      "userName": "tkuim0615",
+      "Email": "tkuim0615@tkuim.com",
+      "class": "D",
+      "department": "資訊管理系",
+      "grade": "三年級",
+      "name": "楊惠雯",
+      "sid": "16"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e6",
+      "userName": "tkupy5984",
+      "Email": "tkupy5984@tkuim.com",
+      "class": "A",
+      "department": "心理學系",
+      "grade": "三年級",
+      "name": "黃美玲",
+      "sid": "17"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e7",
+      "userName": "tkuim6084",
+      "Email": "tkuim6084@tkuim.com",
+      "class": "D",
+      "department": "資訊管理系",
+      "grade": "一年級",
+      "name": "林怡君",
+      "sid": "18"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e8",
+      "userName": "tkuee0895",
+      "Email": "tkuee0895@tkuim.com",
+      "class": "D",
+      "department": "電機工程系",
+      "grade": "四年級",
+      "name": "吳建宏",
+      "sid": "19"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4e9",
+      "userName": "tkume7695",
+      "Email": "tkume7695@tkuim.com",
+      "class": "A",
+      "department": "機械工程系",
+      "grade": "一年級",
+      "name": "黃孟君",
+      "sid": "20"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4ea",
+      "userName": "tkupy7188",
+      "Email": "tkupy7188@tkuim.com",
+      "class": "C",
+      "department": "心理學系",
+      "grade": "一年級",
+      "name": "陳佳蓉",
+      "sid": "21"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4eb",
+      "userName": "tkuim4185",
+      "Email": "tkuim4185@tkuim.com",
+      "class": "B",
+      "department": "資訊管理系",
+      "grade": "四年級",
+      "name": "李欣怡",
+      "sid": "22"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4ec",
+      "userName": "tkuim4922",
+      "Email": "tkuim4922@tkuim.com",
+      "class": "C",
+      "department": "資訊管理系",
+      "grade": "四年級",
+      "name": "李志豪",
+      "sid": "23"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4ed",
+      "userName": "tkupy8131",
+      "Email": "tkupy8131@tkuim.com",
+      "class": "B",
+      "department": "心理學系",
+      "grade": "一年級",
+      "name": "吳佳慧",
+      "sid": "24"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4ee",
+      "userName": "tkubm1141",
+      "Email": "tkubm1141@tkuim.com",
+      "class": "C",
+      "department": "企業管理系",
+      "grade": "三年級",
+      "name": "陳志翔",
+      "sid": "25"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4ef",
+      "userName": "tkubm9838",
+      "Email": "tkubm9838@tkuim.com",
+      "class": "D",
+      "department": "企業管理系",
+      "grade": "四年級",
+      "name": "張建銘",
+      "sid": "26"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f0",
+      "userName": "tkubm8885",
+      "Email": "tkubm8885@tkuim.com",
+      "class": "C",
+      "department": "企業管理系",
+      "grade": "一年級",
+      "name": "李志翔",
+      "sid": "27"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f1",
+      "userName": "tkupy4435",
+      "Email": "tkupy4435@tkuim.com",
+      "class": "B",
+      "department": "心理學系",
+      "grade": "二年級",
+      "name": "楊靜宜",
+      "sid": "28"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f2",
+      "userName": "tkupy3371",
+      "Email": "tkupy3371@tkuim.com",
+      "class": "A",
+      "department": "心理學系",
+      "grade": "二年級",
+      "name": "劉孟君",
+      "sid": "29"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f3",
+      "userName": "tkume9975",
+      "Email": "tkume9975@tkuim.com",
+      "class": "B",
+      "department": "機械工程系",
+      "grade": "二年級",
+      "name": "黃瑞芳",
+      "sid": "30"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f4",
+      "userName": "tkupy6965",
+      "Email": "tkupy6965@tkuim.com",
+      "class": "B",
+      "department": "心理學系",
+      "grade": "一年級",
+      "name": "李世豪",
+      "sid": "31"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f5",
+      "userName": "tkubm9858",
+      "Email": "tkubm9858@tkuim.com",
+      "class": "A",
+      "department": "企業管理系",
+      "grade": "四年級",
+      "name": "楊怡婷",
+      "sid": "32"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f6",
+      "userName": "tkubm2777",
+      "Email": "tkubm2777@tkuim.com",
+      "class": "C",
+      "department": "企業管理系",
+      "grade": "四年級",
+      "name": "林靜宜",
+      "sid": "33"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f7",
+      "userName": "tkubm1681",
+      "Email": "tkubm1681@tkuim.com",
+      "class": "A",
+      "department": "企業管理系",
+      "grade": "二年級",
+      "name": "張嘉豪",
+      "sid": "34"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f8",
+      "userName": "tkubm2099",
+      "Email": "tkubm2099@tkuim.com",
+      "class": "B",
+      "department": "企業管理系",
+      "grade": "一年級",
+      "name": "黃俊傑",
+      "sid": "35"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4f9",
+      "userName": "tkuee4370",
+      "Email": "tkuee4370@tkuim.com",
+      "class": "D",
+      "department": "電機工程系",
+      "grade": "二年級",
+      "name": "吳惠雯",
+      "sid": "36"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4fa",
+      "userName": "tkume8458",
+      "Email": "tkume8458@tkuim.com",
+      "class": "D",
+      "department": "機械工程系",
+      "grade": "三年級",
+      "name": "李子豪",
+      "sid": "37"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4fb",
+      "userName": "tkubm2507",
+      "Email": "tkubm2507@tkuim.com",
+      "class": "A",
+      "department": "企業管理系",
+      "grade": "一年級",
+      "name": "王嘉偉",
+      "sid": "38"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4fc",
+      "userName": "tkubm2938",
+      "Email": "tkubm2938@tkuim.com",
+      "class": "D",
+      "department": "企業管理系",
+      "grade": "四年級",
+      "name": "黃國偉",
+      "sid": "39"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4fd",
+      "userName": "tkume0705",
+      "Email": "tkume0705@tkuim.com",
+      "class": "B",
+      "department": "機械工程系",
+      "grade": "四年級",
+      "name": "陳昱廷",
+      "sid": "40"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4fe",
+      "userName": "tkuim2648",
+      "Email": "tkuim2648@tkuim.com",
+      "class": "D",
+      "department": "資訊管理系",
+      "grade": "三年級",
+      "name": "黃建銘",
+      "sid": "41"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa4ff",
+      "userName": "tkupy5547",
+      "Email": "tkupy5547@tkuim.com",
+      "class": "B",
+      "department": "心理學系",
+      "grade": "二年級",
+      "name": "楊柏宇",
+      "sid": "42"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa500",
+      "userName": "tkupy6003",
+      "Email": "tkupy6003@tkuim.com",
+      "class": "B",
+      "department": "心理學系",
+      "grade": "三年級",
+      "name": "楊怡君",
+      "sid": "43"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa501",
+      "userName": "tkume5852",
+      "Email": "tkume5852@tkuim.com",
+      "class": "D",
+      "department": "機械工程系",
+      "grade": "四年級",
+      "name": "王世豪",
+      "sid": "44"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa502",
+      "userName": "tkume4395",
+      "Email": "tkume4395@tkuim.com",
+      "class": "D",
+      "department": "機械工程系",
+      "grade": "三年級",
+      "name": "蔡雅婷",
+      "sid": "45"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa503",
+      "userName": "tkupy7947",
+      "Email": "tkupy7947@tkuim.com",
+      "class": "A",
+      "department": "心理學系",
+      "grade": "二年級",
+      "name": "蔡佳蓉",
+      "sid": "46"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa504",
+      "userName": "tkume0708",
+      "Email": "tkume0708@tkuim.com",
+      "class": "B",
+      "department": "機械工程系",
+      "grade": "一年級",
+      "name": "吳文杰",
+      "sid": "47"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa505",
+      "userName": "tkuim3149",
+      "Email": "tkuim3149@tkuim.com",
+      "class": "C",
+      "department": "資訊管理系",
+      "grade": "一年級",
+      "name": "李雅婷",
+      "sid": "48"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa506",
+      "userName": "tkuim8674",
+      "Email": "tkuim8674@tkuim.com",
+      "class": "D",
+      "department": "資訊管理系",
+      "grade": "三年級",
+      "name": "楊冠霖",
+      "sid": "49"
+    },
+    {
+      "_id": "6afd19b7e526170a547aa507",
+      "userName": "tkubm1760",
+      "Email": "tkubm1760@tkuim.com",
+      "class": "D",
+      "department": "企業管理系",
+      "grade": "一年級",
+      "name": "劉嘉豪",
+      "sid": "50"
+    }
+  ]
+}
