@@ -19,7 +19,9 @@
 
 ## Docker 啟動
 
-先安裝並開啟 Docker Desktop，複製根目錄 `.env.example` 為 `.env`，自行設定兩組本機資料庫密碼，再執行：
+可先安裝並開啟 Docker Desktop，再雙擊 `啟動作業.command`，它會自動產生本機密碼並啟動服務。
+
+手動操作方式：複製根目錄 `.env.example` 為 `.env`，自行設定兩組本機資料庫密碼，再執行：
 
 ```sh
 docker compose up -d
