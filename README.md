@@ -1,12 +1,16 @@
 # 413630061_StudentHub
 
 1. [GitHub 倉庫：413630061_StudentHub](https://github.com/913shan/413630061_StudentHub)
-2. Postman 測試回應紀錄
+2. Postman 測試截圖
+   - [findAll（200 OK）](screenshots/findAll/413630061.png)
+   - [insertOne（200 OK）](screenshots/insertOne/413630061.png)
+
+## 測試回應紀錄
    - [findAll：新增前 50 筆](docs/GET-新增前.json)
    - [insertOne：成功新增，sid 為 51](docs/POST-新增成功.json)
    - [findAll：新增後 51 筆](docs/GET-新增後.json)
 
-目前附上實際 API JSON 紀錄，尚未加入 Postman 畫面截圖。
+已在本機 Postman 桌面版實際送出 GET 與 POST，皆為 HTTP 200，Test Results 各 3/3。POST 截圖使用未重複的 tkuxx9998，產生 sid "52"；先前 Newman 測試的 tkuxx9999 為 sid "51"。
 
 ## 專案結構
 

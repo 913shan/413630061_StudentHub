@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "StudentHub 老師範例",
+    "name": "413630061_StudentHub",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -56,7 +56,7 @@
               "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
               "const result = pm.response.json();",
               "pm.test(\"code 200\", () => pm.expect(result.code).to.eql(200));",
-              "pm.test(\"新增學生欄位\", () => { pm.expect(result.body.userName).to.eql(\"tkuxx9999\"); pm.expect(result.body.sid).to.be.a(\"string\"); pm.expect(result.body._id).to.match(/^[a-f0-9]{24}$/); });"
+              "pm.test(\"新增學生欄位\", () => { pm.expect(result.body.userName).to.eql(JSON.parse(pm.request.body.raw).userName); pm.expect(result.body.sid).to.be.a(\"string\"); pm.expect(result.body._id).to.match(/^[a-f0-9]{24}$/); });"
             ]
           }
         }
